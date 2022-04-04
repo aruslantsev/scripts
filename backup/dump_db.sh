@@ -3,10 +3,10 @@
 DATE=`date +"%Y-%m-%d_%H-%M"`
 PATH_PREFIX=$BACKUPS_PATH
 
-for db_name in mediawiki zabbix
+for db_name in mediawiki zabbix Syslog loganalyzer
 do
 echo $db_name
-sudo mysqldump -u root --password=$MYSQL_ROOT_PASSWORD "$db_name" > "$PATH_PREFIX"/"$DATE"-"$db_name".sql
+mysqldump -u root --password=$MYSQL_ROOT_PASSWORD "$db_name" > "$PATH_PREFIX"/"$DATE"-"$db_name".sql
 /bin/gzip "$PATH_PREFIX"/"$DATE"-"$db_name".sql
 done
 
