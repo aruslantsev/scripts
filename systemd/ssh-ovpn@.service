@@ -1,0 +1,15 @@
+[Unit]
+Description=SSH tunnel to %I
+After=network-online.target
+
+[Service]
+User=andrei
+Group=andrei
+ExecStart=/usr/bin/ssh -N -L 0.0.0.0:7505:localhost:7505 %i
+# -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
