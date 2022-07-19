@@ -12,8 +12,7 @@
 ./var/games/*
 ./var/tmp/*
 ./var/tmp/.*
-./var/cache/edb/dep/usr/portage/*
-./var/cache/edb/dep/var
+./var/cache/edb/dep/*
 ./var/cache/revdep-rebuild/*
 ./var/lib/bluetooth/*
 ./var/lib/iptables/*
@@ -23,7 +22,7 @@
 ./var/lib/dhcpcd/*
 ./var/lib/kdm/kdmsts
 ./var/lib/module-rebuild/moduledb
-./usr/portage/distfiles/*
+./var/cache/distfiles/*
 ./home/*
 ./usr/src/*
 ./lost+found
